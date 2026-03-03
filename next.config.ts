@@ -46,6 +46,7 @@ function init(phase: string): NextConfig {
     }
 
     return {
+        output: "standalone",
         // Full URL logging to the console when running in dev mode.
         logging: { fetches: { fullUrl: true } },
     };
