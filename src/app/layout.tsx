@@ -19,6 +19,7 @@ import "./globals.css";
 import { auth } from "@/auth";
 import constants from "@/constants";
 import { maintenanceEnabled } from "@/db";
+import AdminIconLink from "@/components/AdminIconLink";
 import AccountAvatar from "@/components/AccountAvatar";
 import Cart from "@/components/Cart";
 import SignInCard from "@/components/SignInCard";
@@ -82,6 +83,9 @@ export default async function RootLayout({
                                             </Link>
                                         </Tooltip>
                                         <Box sx={{ flexGrow: 1 }} />
+                                        {session?.user?.admin && (
+                                            <AdminIconLink />
+                                        )}
                                         <Cart />
                                         <AccountAvatar />
                                     </Toolbar>

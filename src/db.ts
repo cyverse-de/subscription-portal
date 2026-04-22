@@ -171,6 +171,14 @@ export async function maintenanceEnabled() {
     }
 }
 
+export async function toggleMaintenanceMode() {
+    const { rows } = await db.query<{ enabled: boolean }>(
+        "UPDATE maintenance SET enabled = NOT enabled RETURNING enabled",
+    );
+
+    return rows?.[0]?.enabled ?? true;
+}
+
 /**
  * Adds the `transaction` to the database as a purchase order,
  * returning the `po_number`.
