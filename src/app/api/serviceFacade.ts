@@ -122,3 +122,10 @@ export function getOrderDetails(poNumber: number) {
 }
 
 export const ORDER_DETAILS_QUERY_KEY = "fetchOrderDetails";
+
+/**
+ * Calls the /api/admin/maintenance route to toggle maintenance mode.
+ */
+export function adminToggleMaintenanceMode() {
+    return post("/api/admin/maintenance", {});
+}

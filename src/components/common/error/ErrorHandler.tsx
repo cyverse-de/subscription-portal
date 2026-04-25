@@ -53,7 +53,7 @@ const BasicErrorCard = () => (
         }
         subheader={
             <Typography color="error">
-                This wasn{"'"}t supposed to happen. Please try again or contact
+                This {"wasn't"} supposed to happen. Please try again or contact
                 support!
             </Typography>
         }
@@ -64,7 +64,7 @@ const BasicErrorCard = () => (
     </ErrorCardTemplate>
 );
 
-const NotAuthorizedCard = () => (
+export const NotAuthorizedCard = () => (
     <ErrorCardTemplate
         avatar={<SupervisorAccountIcon color="primary" fontSize="large" />}
         title={

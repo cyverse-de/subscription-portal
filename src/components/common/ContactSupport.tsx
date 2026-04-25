@@ -1,3 +1,5 @@
+"use client";
+
 /**
  * A component that can be used to allow a user to contact support.
  */
